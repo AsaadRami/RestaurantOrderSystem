@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.restaurant.controller.HomeController"
+      style="-fx-background-color: #fafafa;">
+
+    <padding><Insets top="60" right="100" bottom="60" left="100"/></padding>
+
+    <Label text="🍽 Restaurant Order System" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #c0392b;"/>
+    <Label fx:id="welcomeLabel" style="-fx-font-size: 16px; -fx-text-fill: #2c3e50;"/>
+
+    <Separator/>
+
+    <Label text="What would you like to do?" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+
+    <Button text="🍔  View Menu &amp; Order" onAction="#handleGoToMenu"
+            style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 260px; -fx-pref-height: 42px; -fx-font-size: 14px;"/>
+
+    <Button text="📋  Order History" onAction="#handleGoToOrderHistory"
+            style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-pref-width: 260px; -fx-pref-height: 38px; -fx-font-size: 13px;"/>
+
+    <Button text="👤  My Profile" onAction="#handleGoToProfile"
+            style="-fx-background-color: #8e44ad; -fx-text-fill: white; -fx-pref-width: 260px; -fx-pref-height: 38px; -fx-font-size: 13px;"/>
+
+    <Separator/>
+
+    <Button text="Logout" onAction="#handleLogout"
+            style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-pref-width: 200px; -fx-pref-height: 32px;"/>
+
+</VBox>

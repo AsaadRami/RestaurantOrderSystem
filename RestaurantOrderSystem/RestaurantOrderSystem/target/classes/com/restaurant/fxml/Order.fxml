@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="14"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.restaurant.controller.OrderController"
+      style="-fx-background-color: #fafafa;">
+
+    <padding><Insets top="20" right="30" bottom="20" left="30"/></padding>
+
+    <Label text="🛒 Your Order" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #c0392b;"/>
+    <Label text="Review your items before placing the order." style="-fx-text-fill: #777;"/>
+
+    <TableView fx:id="orderTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="itemNameColumn"     text="Item"     prefWidth="220"/>
+            <TableColumn fx:id="itemCategoryColumn" text="Category" prefWidth="120"/>
+            <TableColumn fx:id="itemPriceColumn"    text="Price ($)" prefWidth="120"/>
+        </columns>
+        <placeholder><Label text="No items in your order."/></placeholder>
+    </TableView>
+
+    <Label fx:id="totalLabel" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Total: $0.00"/>
+
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Button text="✅ Place Order" onAction="#handlePlaceOrder"
+                style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-height: 36px; -fx-pref-width: 160px; -fx-font-size: 13px;"/>
+        <Button text="← Back to Menu" onAction="#handleBack"
+                style="-fx-pref-height: 36px; -fx-pref-width: 140px;"/>
+    </HBox>
+
+</VBox>

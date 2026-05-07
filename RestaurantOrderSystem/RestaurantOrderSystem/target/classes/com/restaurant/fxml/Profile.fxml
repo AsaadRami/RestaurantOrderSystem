@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.restaurant.controller.ProfileController"
+      style="-fx-background-color: #fafafa;">
+
+    <padding><Insets top="60" right="100" bottom="60" left="100"/></padding>
+
+    <Label text="👤 My Profile" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #8e44ad;"/>
+    <Separator/>
+
+    <Label fx:id="usernameLabel" style="-fx-font-size: 15px; -fx-text-fill: #2c3e50;"/>
+    <Label fx:id="emailLabel"    style="-fx-font-size: 15px; -fx-text-fill: #2c3e50;"/>
+    <Label fx:id="roleLabel"     style="-fx-font-size: 15px; -fx-text-fill: #2c3e50;"/>
+
+    <Separator/>
+
+    <Button text="← Back to Home" onAction="#handleBack"
+            style="-fx-pref-height: 36px; -fx-pref-width: 180px;"/>
+
+</VBox>

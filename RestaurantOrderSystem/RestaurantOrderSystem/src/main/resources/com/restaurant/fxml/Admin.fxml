@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="14"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.restaurant.controller.AdminController"
+      style="-fx-background-color: #fafafa;">
+
+    <padding><Insets top="20" right="30" bottom="20" left="30"/></padding>
+
+    <Label text="⚙ Admin Panel" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #c0392b;"/>
+
+    <Label text="All Orders:" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+    <TableView fx:id="ordersTable" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="userColumn"   text="Customer"  prefWidth="130"/>
+            <TableColumn fx:id="timeColumn"   text="Time"      prefWidth="180"/>
+            <TableColumn fx:id="totalColumn"  text="Total ($)" prefWidth="100"/>
+            <TableColumn fx:id="statusColumn" text="Status"    prefWidth="100"/>
+        </columns>
+        <placeholder><Label text="No orders yet."/></placeholder>
+    </TableView>
+
+    <Label text="All Users:" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+    <TableView fx:id="usersTable" prefHeight="160">
+        <columns>
+            <TableColumn fx:id="unameColumn" text="Username" prefWidth="150"/>
+            <TableColumn fx:id="emailColumn" text="Email"    prefWidth="200"/>
+            <TableColumn fx:id="roleColumn"  text="Role"     prefWidth="100"/>
+        </columns>
+        <placeholder><Label text="No users."/></placeholder>
+    </TableView>
+
+    <Button text="Logout" onAction="#handleLogout"
+            style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-pref-width: 160px; -fx-pref-height: 34px;"/>
+
+</VBox>

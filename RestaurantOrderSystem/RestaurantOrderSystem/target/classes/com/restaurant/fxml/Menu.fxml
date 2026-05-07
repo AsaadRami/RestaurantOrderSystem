@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="12"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.restaurant.controller.MenuController"
+      style="-fx-background-color: #fafafa;">
+
+    <padding><Insets top="20" right="30" bottom="20" left="30"/></padding>
+
+    <Label text="🍽 Our Menu" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #c0392b;"/>
+    <Label text="Select an item and click 'Add to Order'" style="-fx-text-fill: #777;"/>
+
+    <TableView fx:id="menuTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="nameColumn"     text="Item Name" prefWidth="220"/>
+            <TableColumn fx:id="categoryColumn" text="Category"  prefWidth="120"/>
+            <TableColumn fx:id="priceColumn"    text="Price ($)" prefWidth="120"/>
+        </columns>
+        <placeholder><Label text="No menu items available."/></placeholder>
+    </TableView>
+
+    <Label fx:id="messageLabel" style="-fx-text-fill: #27ae60; -fx-font-weight: bold;" text=""/>
+
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Button text="Add to Order" onAction="#handleAddToOrder"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-height: 36px; -fx-pref-width: 150px;"/>
+        <Button text="View Order ➜" onAction="#handleGoToOrder"
+                style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-height: 36px; -fx-pref-width: 150px;"/>
+        <Button text="← Back" onAction="#handleBack"
+                style="-fx-pref-height: 36px; -fx-pref-width: 100px;"/>
+    </HBox>
+
+</VBox>

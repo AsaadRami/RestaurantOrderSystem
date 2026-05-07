@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.restaurant.controller.OrderConfirmationController"
+      style="-fx-background-color: #fafafa;">
+
+    <padding><Insets top="60" right="80" bottom="60" left="80"/></padding>
+
+    <Label text="✅" style="-fx-font-size: 48px;"/>
+    <Label fx:id="confirmLabel" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #27ae60;"/>
+    <Label fx:id="orderDetailsLabel" style="-fx-font-size: 14px; -fx-text-fill: #555;" wrapText="true" textAlignment="CENTER"/>
+
+    <Separator/>
+
+    <Button text="📋 View Order History" onAction="#handleGoToHistory"
+            style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-pref-width: 220px; -fx-pref-height: 38px; -fx-font-size: 13px;"/>
+
+    <Button text="🏠 Back to Home" onAction="#handleGoHome"
+            style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-pref-width: 220px; -fx-pref-height: 36px;"/>
+
+</VBox>

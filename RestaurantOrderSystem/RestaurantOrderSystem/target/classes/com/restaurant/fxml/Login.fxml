@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="16"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.restaurant.controller.LoginController"
+      style="-fx-background-color: #f5f5f5;">
+
+    <padding><Insets top="60" right="80" bottom="60" left="80"/></padding>
+
+    <Label text="🍽 Restaurant Order System" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #c0392b;"/>
+    <Label text="Login to Your Account" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+
+    <Separator/>
+
+    <Label text="Username:" style="-fx-font-weight: bold;"/>
+    <TextField fx:id="usernameField" promptText="Enter username" maxWidth="300"/>
+
+    <Label text="Password:" style="-fx-font-weight: bold;"/>
+    <PasswordField fx:id="passwordField" promptText="Enter password" maxWidth="300"/>
+
+    <Label fx:id="errorLabel" style="-fx-text-fill: red;" text=""/>
+
+    <Button text="Login" onAction="#handleLogin"
+            style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 200px; -fx-pref-height: 36px; -fx-font-size: 14px;"/>
+
+    <Separator/>
+
+    <Label text="Don't have an account?"/>
+    <Button text="Register Here" onAction="#handleGoToRegister"
+            style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-pref-width: 200px; -fx-pref-height: 32px;"/>
+
+</VBox>

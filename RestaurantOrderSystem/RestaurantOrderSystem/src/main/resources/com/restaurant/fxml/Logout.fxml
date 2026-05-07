@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.restaurant.controller.LogoutController"
+      style="-fx-background-color: #fafafa;">
+
+    <padding><Insets top="80" right="100" bottom="80" left="100"/></padding>
+
+    <Label text="👋 Logout" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #c0392b;"/>
+    <Label text="Are you sure you want to logout?" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+
+    <Separator/>
+
+    <Button text="✅  Yes, Logout" onAction="#handleConfirmLogout"
+            style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 220px; -fx-pref-height: 38px; -fx-font-size: 13px;"/>
+
+    <Button text="✖  Cancel" onAction="#handleCancel"
+            style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-pref-width: 220px; -fx-pref-height: 36px;"/>
+
+</VBox>

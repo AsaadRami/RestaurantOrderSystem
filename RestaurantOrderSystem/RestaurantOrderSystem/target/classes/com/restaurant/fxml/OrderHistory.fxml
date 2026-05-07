@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="14"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.restaurant.controller.OrderHistoryController"
+      style="-fx-background-color: #fafafa;">
+
+    <padding><Insets top="20" right="30" bottom="20" left="30"/></padding>
+
+    <Label text="📋 Order History" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2980b9;"/>
+    <Label text="All your past orders." style="-fx-text-fill: #777;"/>
+
+    <TableView fx:id="historyTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn"     text="Order #"  prefWidth="90"/>
+            <TableColumn fx:id="timeColumn"   text="Time"     prefWidth="200"/>
+            <TableColumn fx:id="totalColumn"  text="Total ($)" prefWidth="110"/>
+            <TableColumn fx:id="statusColumn" text="Status"   prefWidth="110"/>
+        </columns>
+        <placeholder><Label text="No orders yet."/></placeholder>
+    </TableView>
+
+    <Button text="← Back to Home" onAction="#handleBack"
+            style="-fx-pref-height: 36px; -fx-pref-width: 160px;"/>
+
+</VBox>
